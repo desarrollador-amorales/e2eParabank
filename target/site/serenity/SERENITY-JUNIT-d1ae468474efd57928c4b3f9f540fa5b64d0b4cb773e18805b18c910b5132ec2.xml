@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Flujo E2E ParaBank - registro, login, retiro y transferencia" skipped="0" tests="1" time="16.77" timestamp="2026-02-04 05:29:20"><testcase name="Usuario se registra, inicia sesión, realiza retiro y transfiere fondos"><failure message="Expected condition failed: waiting for By.cssSelector: a[href*='openaccount.htm'] to be present (tried for 5 second(s) with 100 milliseconds interval)&#10;Build info: version: '4.39.0', revision: '126f156aee'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException">Expected condition failed: waiting for By.cssSelector: a[href*='openaccount.htm'] to be present (tried for 5 second(s) with 100 milliseconds interval)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: driver.version: unknown</failure><system-err>Expected condition failed: waiting for By.cssSelector: a[href*='openaccount.htm'] to be present (tried for 5 second(s) with 100 milliseconds interval)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: driver.version: unknown&#13;
+parabank.stepdefinitions.ParabankStepDefinitions.transfiere(ParabankStepDefinitions.java:72)&#13;
+✽.transfiere "15.6" desde la primera cuenta a la segunda(classpath:features/parabanke2e.feature:6)&#13;
+</system-err></testcase></testsuite>

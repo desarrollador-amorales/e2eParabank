@@ -1,0 +1,15 @@
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\tasks\Register.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\ui\RegisterPage.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\ui\HomePage.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\ui\AccountsOverviewPage.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\tasks\Login.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\tasks\TransferFunds.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\utils\Waits.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\tasks\NavigateTo.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\stepdefinitions\ParabankStepDefinitions.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\utils\TestData.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\questions\WelcomeMessage.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\model\User.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\runners\CucumberTestSuite.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\questions\TransferSuccessMessage.java
+C:\Users\adria\Desktop\Softka TH\RT\e2eParabank\src\test\java\parabank\ui\TransferFundsPage.java

@@ -1,0 +1,5 @@
+Observaciónes importantes:
+Aunque en la página principal (antes de iniciar sesión) se menciona "Withdraw Funds" como parte de los servicios ATM, esta funcionalidad no está disponible en la interfaz web para usuarios logueados.
+La opción más cercana sería "Transfer Funds" (Transferir Fondos), que me permitio realizar el flujo.
+Tomar a consideracion la version de java y maven con la que trabajaremos en el proyecto, asi mismo como la version de Serenity
+Validaciones de los criterios de aceptacion posibles.

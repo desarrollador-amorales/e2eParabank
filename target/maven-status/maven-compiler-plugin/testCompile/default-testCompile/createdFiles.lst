@@ -1,0 +1,15 @@
+parabank\tasks\NavigateTo.class
+parabank\questions\WelcomeMessage.class
+parabank\ui\RegisterPage.class
+parabank\model\User.class
+parabank\ui\HomePage.class
+parabank\tasks\TransferFunds.class
+parabank\stepdefinitions\ParabankStepDefinitions.class
+parabank\ui\TransferFundsPage.class
+parabank\questions\TransferSuccessMessage.class
+parabank\ui\AccountsOverviewPage.class
+parabank\utils\Waits.class
+parabank\tasks\Register.class
+parabank\utils\TestData.class
+parabank\runners\CucumberTestSuite.class
+parabank\tasks\Login.class
