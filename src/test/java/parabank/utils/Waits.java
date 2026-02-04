@@ -13,6 +13,6 @@ public final class Waits {
     private Waits() { }
 
     public static void untilVisible(Actor actor, Target target) {
-        actor.attemptsTo(WaitUntil.the((net.serenitybdd.screenplay.targets.Target) target, isVisible()).forNoMoreThan(20).seconds());
+        actor.attemptsTo(WaitUntil.the((net.serenitybdd.screenplay.targets.Target) target, isVisible()).forNoMoreThan(5).seconds());
     }
 }
