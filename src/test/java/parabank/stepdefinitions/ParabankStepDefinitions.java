@@ -73,8 +73,9 @@ public class ParabankStepDefinitions {
         userActor.attemptsTo(
                 Click.on(Target.the("Open New Account")
                         .locatedBy("a[href*='openaccount.htm']")
-                ),
-                MultipleClicksOnSameElement.on(HomePage.CREATE_ACCOUNT, 2)
+                )
+                ,Click.on(HomePage.CREATE_ACCOUNT)
+                //,MultipleClicksOnSameElement.on(HomePage.CREATE_ACCOUNT, 1)
         );
         // Espera a que el mensaje de confirmación sea visible
         Waits.untilVisible(userActor, HomePage.ACCOUNT_CREATION_CONFIRMATION);
