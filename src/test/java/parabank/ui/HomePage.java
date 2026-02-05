@@ -29,5 +29,7 @@ public class HomePage {
     public static final Target CREATE_ACCOUNT = Target.the("Open New Account")
             .locatedBy("//*[@id=\"openAccountForm\"]/form/div/input");
 
+    public static final Target ACCOUNT_CREATION_CONFIRMATION = Target.the("Confirmation message for account creation")
+            .locatedBy("//*[@id=\"openAccountResult\"]/h1");
 
 }

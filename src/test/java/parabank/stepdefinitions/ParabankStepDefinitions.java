@@ -12,6 +12,7 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.WebDriver;
 import parabank.model.User;
 import parabank.questions.TransferSuccessMessage;
@@ -21,6 +22,7 @@ import parabank.ui.HomePage;
 import parabank.utils.TestData;
 import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.actions.Click;
+import parabank.utils.Waits;
 
 
 public class ParabankStepDefinitions {
@@ -75,6 +77,8 @@ public class ParabankStepDefinitions {
                 ),
                 Click.on(HomePage.CREATE_ACCOUNT)
         );
+        // Espera a que el mensaje de confirmación sea visible
+        Waits.untilVisible(userActor, HomePage.ACCOUNT_CREATION_CONFIRMATION);
 
         userActor.attemptsTo(TransferFunds.amount(amount));
     }

@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import parabank.ui.HomePage;
 import parabank.ui.TransferFundsPage;
+import parabank.utils.Waits;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -25,6 +26,10 @@ public class TransferFunds implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+
+        System.out.println("Desde cuenta: " + TransferFundsPage.FROM_ACCOUNT);
+        System.out.println("Hasta cuenta: " + TransferFundsPage.TO_ACCOUNT);
+
         actor.attemptsTo(
                 Click.on(HomePage.TRANSFER_LINK),
                 Enter.theValue(amount).into(TransferFundsPage.AMOUNT),
