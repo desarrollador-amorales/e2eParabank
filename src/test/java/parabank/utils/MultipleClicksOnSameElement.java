@@ -1,4 +1,4 @@
-package parabank.tasks;
+package parabank.utils;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
