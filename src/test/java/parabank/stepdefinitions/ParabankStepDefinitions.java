@@ -12,7 +12,6 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.WebDriver;
 import parabank.model.User;
 import parabank.questions.TransferSuccessMessage;
@@ -75,7 +74,7 @@ public class ParabankStepDefinitions {
                 Click.on(Target.the("Open New Account")
                         .locatedBy("a[href*='openaccount.htm']")
                 ),
-                Click.on(HomePage.CREATE_ACCOUNT)
+                MultipleClicksOnSameElement.on(HomePage.CREATE_ACCOUNT, 2)
         );
         // Espera a que el mensaje de confirmación sea visible
         Waits.untilVisible(userActor, HomePage.ACCOUNT_CREATION_CONFIRMATION);
