@@ -1,0 +1,7 @@
+id,firstName,lastName,address,city,state,zipCode,phone,ssn,username,password
+U1,Fernando,Ibáñez,Av. Simón Bolívar 155,Quito,Pichincha,170702,098223344,417,usr_u49,pwd_u49
+U2,Daniela,Morales,Calle Sucre 91,Loja,Loja,110150,097334455,528,usr_u50,pwd_u50
+U3,José,Córdova,Av. Atahualpa 60,Ambato,Tungurahua,180150,096445566,639,usr_u51,pwd_u51
+U4,Andrea,Ruiz,Barrio Central 44,Puyo,Pastaza,160150,095556677,741,usr_u52,pwd_u52
+U5,Mateo,Peralta,Calle Rocafuerte 102,Portoviejo,Manabí,130101,094667788,852,usr_u53,pwd_u53
+U6,Natalia,Sánchez,Av. Malecón 380,Salinas,Santa Elena,240204,093778899,963,usr_u54,pwd_u54

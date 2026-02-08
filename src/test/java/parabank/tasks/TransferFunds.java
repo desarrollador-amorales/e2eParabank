@@ -8,7 +8,6 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import parabank.ui.HomePage;
 import parabank.ui.TransferFundsPage;
-import parabank.utils.Waits;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 

@@ -39,8 +39,6 @@ public class RegisterPage {
             .locatedBy("#repeatedPassword");
 
     public static final Target REGISTER_BUTTON = Target.the("Register button")
-            .locatedBy("//*[@id='customerForm']/table/tbody/tr[13]/td[2]/input");
+            .locatedBy("#customerForm input[type='submit']");
 
-    public static final Target REGISTER_SUCCESS_TITLE = Target.the("Registration success title")
-            .locatedBy("#rightPanel h1");
 }

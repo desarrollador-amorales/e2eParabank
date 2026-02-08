@@ -17,12 +17,7 @@ import parabank.model.User;
 import parabank.questions.TransferSuccessMessage;
 import parabank.questions.WelcomeMessage;
 import parabank.tasks.*;
-import parabank.ui.HomePage;
-import parabank.utils.MultipleClicksOnSameElement;
 import parabank.utils.TestData;
-import net.serenitybdd.screenplay.targets.Target;
-import net.serenitybdd.screenplay.actions.Click;
-import parabank.utils.Waits;
 
 
 public class ParabankStepDefinitions {
@@ -46,7 +41,6 @@ public class ParabankStepDefinitions {
     @Given("el usuario se registra en ParaBank con datos válidos")
     public void elUsuarioSeRegistra() {
         userActor.attemptsTo(Register.with(user));
-
         // Validación mínima: estamos logueados o tenemos panel izquierdo con mensaje
         Ensure.that(WelcomeMessage.text()).contains("Welcome to ParaBank");
     }
@@ -56,13 +50,11 @@ public class ParabankStepDefinitions {
         // En ParaBank al registrarte normalmente quedas logueado.
         // Pero para cumplir el requisito, hacemos logout/login.
         // Logout está en el menú izquierdo "Log Out" (link contiene logout.htm)
+        //Implemento logica dentro un task para el "Log Out"
         userActor.attemptsTo(
-                Click.on(Target.the("Log Out")
-                                .locatedBy("a[href*='logout.htm']")
-                )
+                Logout.fromParabank(),
+                Login.withCredentials(user.getUsername(), user.getPassword())
         );
-
-        userActor.attemptsTo(Login.withCredentials(user.getUsername(), user.getPassword()));
 
         Ensure.that(WelcomeMessage.text()).containsIgnoringCase(user.getUsername());
     }
@@ -72,16 +64,9 @@ public class ParabankStepDefinitions {
         // Haciendo relacion al usuario y contraseña con que el se realiza la prueba
         // se crea una cuenta nueva antes de poder transferir entre cuentas.
         userActor.attemptsTo(
-                Click.on(Target.the("Open New Account")
-                        .locatedBy("a[href*='openaccount.htm']")
-                )
-                //,Click.on(HomePage.CREATE_ACCOUNT)
-                , MultipleClicksOnSameElement.on(HomePage.CREATE_ACCOUNT, 2)
+                OpenNewAccount.onceCreatedSuccessfully(),
+                TransferFunds.amount(amount)
         );
-        // Espera a que el mensaje de confirmación sea visible
-        Waits.untilVisible(userActor, HomePage.ACCOUNT_CREATION_CONFIRMATION);
-
-        userActor.attemptsTo(TransferFunds.amount(amount));
     }
 
     //Validaciones de confirmaciones
