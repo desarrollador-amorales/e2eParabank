@@ -14,3 +14,4 @@ Feature: Transferencia ParaBank (data-driven externo csv)
       | userId | transferId |
       | U3     | T1         |
       | U6     | T2         |
+      | U2     | T3         |

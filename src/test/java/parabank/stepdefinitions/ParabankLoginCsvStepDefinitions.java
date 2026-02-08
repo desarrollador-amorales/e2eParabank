@@ -21,13 +21,12 @@ import java.util.Map;
 
 public class ParabankLoginCsvStepDefinitions {
 
+    Actor actor = OnStage.theActorInTheSpotlight();
+    User user = actor.recall("user");
+
     @When("el usuario inicia sesión con el usuario cargado")
     public void elUsuarioIniciaSesionConUsuarioCargado() {
         // ParaBank suele dejarte logueado tras registro, hacemos logout/login para validar realmente login
-
-        Actor actor = OnStage.theActorInTheSpotlight();
-        User user = actor.recall("user");
-
         actor.attemptsTo(
                 Logout.fromParabank(),
                 Login.withCredentials(user.getUsername(), user.getPassword())
@@ -36,8 +35,6 @@ public class ParabankLoginCsvStepDefinitions {
 
     @Then("debe ver el username en el panel de bienvenida")
     public void debeVerElUsernameEnBienvenida() {
-        Actor actor = OnStage.theActorInTheSpotlight();
-        User user = actor.recall("user");
         Ensure.that(WelcomeMessage.text()).containsIgnoringCase(user.getUsername());
     }
 }

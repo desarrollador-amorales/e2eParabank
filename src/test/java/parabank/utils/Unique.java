@@ -1,9 +1,6 @@
 package parabank.utils;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.UUID;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Unique {
     private Unique() {}

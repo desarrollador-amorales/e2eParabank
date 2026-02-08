@@ -11,17 +11,17 @@ import parabank.tasks.*;
 import java.util.Map;
 public class ParabankTransferCsvStepDefinitions {
 
+    Actor useractor = OnStage.theActorInTheSpotlight();
+    String amount = useractor.recall("amount");
+
     @And("el usuario crea una nueva cuenta para poder transferir")
     public void creaNuevaCuenta() {
-        Actor useractor = OnStage.theActorInTheSpotlight();
         useractor.attemptsTo(OpenNewAccount.onceCreatedSuccessfully());
     }
 
 
     @When("el usuario transfiere el monto cargado desde la primera cuenta a la segunda")
     public void transfiereMontoCargado() {
-        Actor useractor = OnStage.theActorInTheSpotlight();
-        String amount = useractor.recall("amount");
         useractor.attemptsTo(TransferFunds.amount(amount));
     }
 
